@@ -2,17 +2,9 @@
 A. Harvest-Proof (your quantum idea, upgraded)
 "Everything encrypted today will be readable by a quantum computer in 2035 — and adversaries are recording it NOW." ("Harvest now, decrypt later" is the real, named threat.) Build a hybrid post-quantum messenger/file vault using NIST-standardised algorithms (ML-KEM/Kyber via the open-source liboqs library), plus an AI triage engine that ranks an organisation's data by how long it must stay secret (medical records = 50 years → migrate first; today's OTP = irrelevant). Demo: "intercept" a classical-encrypted channel and crack it (simulated) while the PQC channel survives. Nobody at school level does this because it sounds hard — the libraries make it doable, and it's squarely Microsoft-flavoured (they're migrating Azure to PQC).
 
-B. Sentinel: AI that protects AI
-The meta-play. The world now runs on models, so the attack surface is the models: data poisoning, prompt injection, model theft. Build a guardian that scans a training dataset for poisoned samples (outlier detection in embedding space), watches a live model for prompt-injection jailbreaks, and issues a "model integrity certificate." Demo: poison 2% of an image dataset, show the detector catching exactly those samples; show a live jailbreak attempt being blocked. Judges backed by Microsoft will find this delicious — AI security is their hottest internal topic.
-
-C. Festival Guardian: crowd-crush prediction
-India-resonant and emotionally powerful (Hathras 2024, Kumbh 2025). Computer vision counts people from CCTV/top-view video using density estimation, no faces — "we count crowds, not people" is a killer privacy line. An AI model forecasts density 10–15 minutes ahead (crowd flow is physics + ML), and a simulation layer tests interventions (open which gate, divert which flow) before the crush forms. Demo: agent-based crowd simulation + live risk heatmap + warning. Fits Safety + Privacy + fairness (protects pilgrims of every class), and the track's own sample list mentions unsafe crowding — you'd be taking their hint to city scale.
 
 D. Datamorph: privacy minimisation engine
 For the DPDP Act era (India's data-protection law). Point the AI at any document, photo or screenshot; it detects all PII (faces, names, Aadhaar numbers, location metadata), auto-redacts to the minimum shareable version, and generates an audit trail. Optionally pair with a zero-knowledge-style demo: prove "I'm a student of this school" without revealing anything else. Simple to demo, zero saturation, and "Privacy" is the first word of the track.
-
-E. Forest Guardian: the AI ranger
-Acoustic AI detects gunshots and chainsaws in forest audio (public datasets exist), satellite hotspots flag fires (FIRMS again — reusable from your disaster stack), and a poaching-risk model suggests patrol routes (this is real deployed tech — PAWS — so it's defensible in Q&A). Demo: live audio classification + risk heatmap on a reserve map. Cinematic, grand, and protects both communities and rangers.
 
 F. Firebreak: the misinformation containment engine
 "Every disaster has a second wave: rumours." During cyclones and floods, false warnings kill. NLP matches claims against verified sources; network analysis detects coordinated bot amplification; then the system "injects" corrections at the right nodes of the spread graph. Demo: network-graph simulation of a rumour spreading with and without firebreak. Bonus: it bolts straight onto your disaster platform as a module.
@@ -251,39 +243,6 @@ Category 4 — Infrastructure, climate and the physical world
 roject: GHOSTTRACE
 AI MODEL FORENSICS · ADVERSARIAL MACHINE LEARNING · NEURAL SECURITY
 Find the hidden weapon inside an AI model.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-10
-
-
-
-
-
-
-
-
-
-
-
-
 
 1. The real-world problem
 Imagine a hospital downloads an AI model to detect cancer from medical scans.
