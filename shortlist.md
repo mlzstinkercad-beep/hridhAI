@@ -4,9 +4,10 @@ rf sensing - 4 / 10
 anti ai  - 1
 guardians of the galaxy - 5
 
-under rsearch:
+# under rsearch:
 beating quantum using classical ideas
 vpn for drones
 ghostrace(10 / 10 baddie)
 AEGIS athena's shield
 zero trust gemoetry fire wall
+Datamorph: privacy minimisation engine
