@@ -1,15 +1,5 @@
 # hridhAI — AI That Protects
 
-<p align="center">
-  **Not just building smarter AI. Building AI that keeps people, systems, and information safer.**
-</p>
-
-<p align="center">
-  ![Focus](https://img.shields.io/badge/Focus-AI%20That%20Protects-1565C0?style=for-the-badge)
-  ![Research](https://img.shields.io/badge/Research-Student--led-2E7D32?style=for-the-badge)
-  ![Status](https://img.shields.io/badge/Status-Exploring%20%26%20Prototyping-orange?style=for-the-badge)
-</p>
-
 **hridhAI** is a student-led research and engineering workspace exploring how AI, signal processing, mathematics, and software can protect people from emerging threats.
 
 We are interested in systems that do more than classify a problem: systems that investigate, prevent, contain, or recover from it.
