@@ -1,15 +1,15 @@
-app cell - 0
 
-maya- 6  (mid ahh)
+
+maya- 6  (mid ahh) - 20% chance
 
 rf sensing - 4 / 10
 
-anti ai  - 1
 
-guardians of the galaxy - 5
+
+guardians of the galaxy (anti ai  1) - 5
 
 # under rsearch:
-beating quantum using classical ideas
+
 
 vpn for drones
 
