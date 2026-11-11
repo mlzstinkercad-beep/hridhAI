@@ -1,0 +1,38 @@
+experiment_id: "ghosttrace-mnist-smoke-v1"
+seed: 42
+dataset:
+  name: "MNIST"
+  data_dir: "./data"
+  num_classes: 10
+  image_shape: [1, 28, 28]
+  preload_ram: true
+
+model:
+  architecture: "ForensicCNN"
+  max_params: 500000
+  epochs: 3
+  batch_size: 256
+  learning_rate: 0.002
+
+attack:
+  family: "fixed_patch"
+  poison_rate: 0.08
+  target_class: 7
+  trigger_size: 4
+  trigger_pos: [23, 23]  # Bottom-right corner (rows 23..26, cols 23..26)
+  trigger_value: 1.0
+
+scanner:
+  clean_reference_samples: 512
+  inversion_steps: 70
+  inversion_batch_size: 128
+  inversion_lr: 0.15
+  init_lambda: 0.01
+  mad_threshold: 2.0
+
+mitigation:
+  method: "trigger_unlearning"
+  epochs: 2
+  batch_size: 128
+  learning_rate: 0.0005
+  unlearn_ratio: 0.25
