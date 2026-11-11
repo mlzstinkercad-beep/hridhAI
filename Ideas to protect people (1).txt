@@ -1,0 +1,157 @@
+# Hackathon Ideas: "AI That Protects People"
+
+All ideas from the brainstorming rounds, in the order they came up.
+---
+
+## Shortlist
+
+| Rank | Idea | Why |
+|---|---|---|
+| 1 | **Echo**: survivors located via telecom fibre (Round 7) | Uses infrastructure that already exists, has a clear gap and a strong demo |
+| 2 | **Phage–Superbug Matcher** (Round 8) | Huge problem, public data, no ethics overhead |
+| 3 | **Planetary Failure Radar** (Round 3) | "Time machine" demo, free global data, clear buyers |
+| 4 | **Counterfeit Medicine Scanner** (Round 4) | Clear business case, physical demo |
+| 5 | **Fire Before Fire** (Round 1) | Fits embedded/hardware strengths |
+
+---
+
+## Round 1: First set
+
+### 1.1 Duress Detection
+- **Problem:** In coercion (elder financial abuse, forced transfers), the victim authenticates successfully, so passwords, OTPs and Face ID all pass.
+- **Idea:** An on-device model learns a person's normal behaviour (typing rhythm, hesitation, swipe pressure, how they navigate, gaze). It detects **duress**, not identity, then shows a *fake success* while silently placing a hold and sending a covert alert.
+- **What's new:** It asks "are you acting freely?" instead of "is this you?"
+- **Demo:** A normal transfer, then a coerced one with someone standing over the user. The screen shows "Transfer complete" while the hold fires.
+
+### 1.2 Camera-free Fall and Breathing Guardian (Wi-Fi CSI)
+- **Idea:** An ESP32 pair captures Wi-Fi Channel State Information, and a tiny 1D-CNN or transformer detects falls, abnormal breathing and prolonged inactivity through walls, with no camera.
+- **Why:** Privacy comes from the physics, it needs about $10 of hardware, and it runs at the edge.
+- **Demo:** A "fall" behind a curtain triggers an alert within 2 s, and the live breathing waveform flattens when the person holds their breath.
+
+### 1.3 Fire Before Fire: lithium battery thermal-runaway prediction
+- **Problem:** E-bike and e-scooter battery fires while charging.
+- **Idea:** A smart plug samples current and voltage at high rate, and a small model spots signatures that come before thermal runaway (micro-oscillations, rising internal resistance). It cuts power minutes early.
+- **Demo:** Run it on public NASA/CALCE data or an abused cell in a safe enclosure. The plug trips and shows a "time-to-runaway" countdown.
+
+### 1.4 "Did the AI eat my life?": citizen membership-inference and unlearning
+- **Idea:** Lets an individual test whether an open model memorised their data (membership inference), then shows machine unlearning removing it, with before/after proof.
+- **Demo:** Plant a personal record in a fine-tuned model, detect it, unlearn it, and show the leak stop.
+
+### 1.5 Silent 911
+- **Idea:** An AI decodes non-verbal signals during an emergency call (taps, breath, whispers, background acoustics, phone motion) into a structured incident report, and the caller answers yes/no questions by tapping.
+- **Demo:** Call with a hand over your mouth while the dispatcher dashboard fills in live.
+
+### 1.6 Cognitive Collapse Predictor
+- **Idea:** Forecasts human error 5–10 minutes ahead for high-risk operators (crane, truck, ICU) by combining micro-saccades from a webcam, steering or keystroke entropy and voice prosody.
+- **What's new:** It gives a personalised forecast of the error itself, where fatigue detection is reactive.
+
+---
+
+## Round 2: Raised bar
+
+### 2.1 Every Phone Is a Structural Engineer
+- **Idea:** After an earthquake, phones in a building capture its sway through their accelerometers. A physics-informed model estimates the drop in natural frequency, and so the stiffness loss and damage, **per floor**.
+- **Demo:** A balsa tower on a shake table. Snap a column, and that floor turns red: "Do not re-enter. Stiffness down 18%."
+
+### 2.2 Fleets as a Nervous System for Bridges (CAN data)
+- **Idea:** Trucks already log suspension and accelerometer data on CAN/J1939. A model learns each bridge's dynamic signature from many crossings and detects degradation early. It needs no new hardware.
+- **Demo:** Replay crossings over a degrading model bridge, flag it, and it fails on the predicted timeline.
+
+### 2.3 Biological Twin for the Cold Chain
+- **Idea:** A hybrid neural-ODE combines microbial growth kinetics with full reefer temperature traces to estimate **pathogen load** and remaining safe life, instead of only raising temperature alarms.
+- **Demo:** Two pallets, both with "no alarm". One is flagged unsafe, and a plate culture confirms it.
+
+### 2.4 Delusion-Spiral Detector (interpretability)
+- **Idea:** Linear probes on an open model's activations detect sycophantic belief reinforcement building up over a long chat, and activation steering grounds the user.
+- **Demo:** A 40-turn drifting conversation with an internal "reinforcement meter". Turn on steering and the reply becomes grounding.
+
+### 2.5 Heatstroke Before Symptoms
+- **Idea:** Estimates core body temperature from rPPG (face video), skin-temperature trends, a heat-balance physics model and weather data, warning 20–30 minutes before collapse.
+- **Demo:** A teammate exercises in a heated jacket, and the phone's estimate tracks a reference sensor.
+
+---
+
+## Round 3: Big data, fundable
+
+### 3.1 Planetary Failure Radar
+- **Problem:** Dams, tailings dams, slopes and buildings deform by millimetres for months before collapse. Sentinel-1 InSAR records this, but nobody turns it into automatic warnings globally.
+- **Idea:** Learn the acceleration signature that comes before failure from deformation time series plus rainfall, soil and structure type, then score every structure.
+- **Demo:** Run "back in time" on a documented collapse using only earlier data. It flags red weeks before, then you show the real footage and the structures flagged today.
+- **Pitch line:** *"Every collapse whispers before it screams. We built the ears."*
+
+### 3.2 Heatwave Death Map
+- **Idea:** Combines satellite thermal data, roof material, building age and floor, tree cover, census age data and forecasts to estimate indoor heat and death risk **per building**, producing a 72-hour door-knocking list.
+- **Demo:** Overlay predicted hotspots on the real mortality clusters from a past heatwave.
+
+### 3.3 Famine Before Hunger
+- **Idea:** Combines satellite crop vigour, rainfall, market food prices, displacement data and night-lights to forecast child-malnutrition hotspots by district, 3–6 months ahead.
+- **Demo:** Predicts a past crisis before the official declaration.
+
+### 3.4 The Right Antibiotic Before the Lab Result
+- **Idea:** Predicts which antibiotic will work for a patient on day 0 from their profile, infection site, local resistance patterns and prescription history, instead of waiting 48–72 hours.
+- **Demo:** A retrospective comparison of empirical prescribing against the model.
+
+### 3.5 Silent Groundwater Collapse
+- **Idea:** Combines GRACE gravity data, InSAR subsidence and well records to predict which towns' wells go dry, and when.
+- **Demo:** A "years until no water" map validated against wells that have already failed.
+
+---
+
+## Round 4: The million-dollar problem
+
+### 4.1 Counterfeit Medicine Scanner
+- **Problem:** The WHO estimates about 1 in 10 medical products in low- and middle-income countries is substandard or falsified, and patients can't check.
+- **Idea:** A phone camera, optionally with a cheap clip-on NIR LED and filter, plus an on-device vision model that fingerprints genuine products and flags anything off-distribution. Every scan is geotagged, building a live global counterfeit map.
+- **Buyers:** Pharma brands, regulators, NGOs, pharmacies.
+- **Demo:** Two identical-looking packs. One shows GENUINE, the other FALSIFIED, then the map of fake clusters appears.
+- **Pitch line:** *"A $3 phone accessory just did what a $30,000 lab instrument does."*
+- Hand-held detectors exist but are expensive. The edge here is a phone-based, consumer-level, crowd-sourced tool.
+
+---
+
+## Round 5: Wins hearts
+
+### 5.1 "Hear Me": a voice for non-verbal children
+- **Idea:** A model personalised to each child is few-shot fine-tuned on parent-labelled clips of the child's sounds, gestures and facial cues, and translates them for teachers and carers. Pain and distress signals get priority.
+- **Demo:** A clip plays, the room can't interpret it, and Hear Me shows "My tummy hurts."
+- **Status:** Dropped. It needs ethics approval and consent from a child's family.
+
+---
+
+## Round 6: No-ethics version
+
+### 6.1 "Last Warning": flash-flood alerts for ungauged villages
+- **Idea:** Transfer-learned flood forecasting for streams with no gauges (DEM, soil moisture, satellite rainfall), village-level ETA and depth, a voice call to feature phones and an ESP32/LoRa siren.
+- **Status:** Google Flood Hub already does ungauged flood forecasting.
+
+---
+
+## Round 7: Unsolved angle
+
+### 7.1 "Echo": locating trapped survivors through existing telecom fibre
+- **Problem:** After an earthquake, rescuers have about 72 hours and don't know which collapsed buildings hold survivors.
+- **Idea:** Distributed Acoustic Sensing (DAS) turns existing telecom fibre into thousands of vibration sensors. A model separates human signals (tapping, knocking) from aftershocks, machinery and traffic, localises them along the fibre and produces a ranked "dig here" map.
+- **What's new:** DAS is used today for earthquake detection and infrastructure monitoring. I found no city-scale use to locate survivors after a quake.
+- **No ethics issues:** It uses simulated and recorded vibration signals only.
+- **Demo:** A fibre spool under rubble with a buried "survivor" box. The lights go down, there's a slow knock, and one building turns red: "Survivor likely, dig here."
+- **Pitch line:** *"The cables that carried their last text message can now tell us they're still alive."*
+- **Risk:** DAS interrogators are expensive, so partner with a photonics lab or telecom operator, or inject signals into a public DAS dataset.
+
+---
+
+## Round 8: The biggest problem today
+
+### 8.1 Phage–Superbug Matcher (antimicrobial resistance)
+- **Problem:** Drug-resistant infections directly cause more than a million deaths a year, and very few new antibiotic classes are coming through.
+- **Idea:** From a resistant strain's genome, predict which phages in a library will kill it. The model uses bacterial receptor genes, phage tail-fibre proteins and CRISPR spacers (the strain's record of past phage encounters). It turns weeks of lab screening into a ranked prediction in seconds.
+- **Data:** Public bacterial genomes, resistance-gene databases, WHO surveillance and phage–host interaction datasets. No human-subject data.
+- **Demo:** Every antibiotic shows red, "No treatment available." The model returns "Phage cocktail: 3 phages, predicted kill probability 91%."
+- **Pitch line:** *"When medicine runs out of answers, we found one in hours, not weeks."*
+- **Validation:** Hold out known phage–host pairs and show the model predicts them.
+
+---
+
+## Before you commit
+1. Run a prior-art search (Google Scholar, arXiv, GitHub, startup databases) on your top two ideas.
+2. Confirm you can get the data or hardware for the live demo.
+3. Treat the numbers in the demo scripts as placeholders and replace them with real model outputs.
