@@ -1,0 +1,10 @@
+Bose-Einstein Condensation (BEC) Spectral Filtering for Application-Layer DDoS
+Problem Statement: Botnets using millions of residential proxies send slow, human-like HTTP queries that bypass Cloudflare/WAF rate limits and crash hospital or banking portals.
+
+Fields Used to Solve It: Quantum Statistical Mechanics (Bose-Einstein Condensation of Indistinguishable Bosons) + Spectral Graph Wavelet Networks.
+
+Solution: Map each active session's micro-navigation trajectory and TLS timing jitter into a virtual energy-momentum state space. Legitimate human users obey Fermi-Dirac-like diversity (spread across high-energy eigenstates), whereas residential proxy bots driven by a shared automation script undergo Bose-Einstein condensation into a single macroscopic zero-momentum ground state that can be excised with one rank-1 projector.
+
+Novelty Rating: 9.5 / 10
+
+Chance That We Win: 85% — Clean, high-speed live demo where 50,000 simulated stealth bot sessions condense into a single glowing spike on a 3D spectral plot and get surgically dropped.
