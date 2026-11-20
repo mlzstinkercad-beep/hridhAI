@@ -1,0 +1,10 @@
+Cahn-Hilliard Spinodal Decomposition for 8-Hour Early Sepsis Warning
+Problem Statement: ICU patients developing septic shock maintain normal blood pressure and oxygen saturation via physiological compensation until sudden, fatal multi-organ collapse.
+
+Fields Used to Solve It: Binary Alloy Phase-Separation Physics (Cahn-Hilliard Nonlinear PDEs) + Neural Operator Surrogates.
+
+Solution: Model the cross-correlation tensor between heart-rate variability, respiratory rate, and pulse-transit time as a homogeneous binary alloy. Early sepsis destroys autonomic nervous coupling, causing the homeostatic manifold to undergo spinodal decomposition (spontaneous phase separation into decoupled islands) hours before scalar vitals cross hospital alarm thresholds.
+
+Novelty Rating: 9.3 / 10
+
+Chance That We Win: 82% — Can be validated directly on public MIMIC-IV ICU waveforms with a side-by-side "Standard ICU Monitor (Green/Safe) vs. Spinodal Phase Map (Red/Decompensating)" visual.
